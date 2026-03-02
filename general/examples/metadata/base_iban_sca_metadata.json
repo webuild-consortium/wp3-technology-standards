@@ -208,21 +208,38 @@
   ],
   "claims": [
     {
+      "path": ["masked_iban"],
+      "display": [
+        {
+          "locale": "cs-CZ",
+          "label": "Maskované IBAN číslo účtu",
+          "description": "Maskované IBAN číslo účtu"
+        },
+        {
+          "locale": "en-US",
+          "label": "Masked IBAN",
+          "description": "Masked IBAN number"
+        }
+      ],
+      "sd": "always",
+      "mandatory": true
+    },
+    {
       "path": ["iban"],
       "display": [
         {
           "locale": "cs-CZ",
           "label": "IBAN číslo účtu",
-          "description": "Anonymní dentifikátor uživatele"
+          "description": "IBAN číslo účtu"
         },
         {
           "locale": "en-US",
           "label": "IBAN number",
-          "description": "Anonymous user's ID"
+          "description": "Full IBAN numberr"
         }
       ],
       "sd": "always",
-      "mandatory": true
+      "mandatory": false
     },
     {
       "path": ["bic"],
@@ -239,7 +256,7 @@
         }
       ],
       "sd": "always",
-      "mandatory": true
+      "mandatory": false
     },
     {
       "path": ["currency"],
@@ -257,6 +274,57 @@
       ],
       "sd": "always",
       "mandatory": true
+    },
+    {
+      "path": ["national_bank_code"],
+      "display": [
+        {
+          "locale": "cs-CZ",
+          "label": "Kód banky",
+          "description": "Národní kód banky, kde je veden účet"
+        },
+        {
+          "locale": "en-US",
+          "label": "Bank code",
+          "description": "National bank code for account"
+        }
+      ],
+      "sd": "always",
+      "mandatory": false
+    },
+    {
+      "path": ["scheme_identifier"],
+      "display": [
+        {
+          "locale": "cs-CZ",
+          "label": "Identifikátor platebního schématu",
+          "description": "Identifikátor platebního schématu"
+        },
+        {
+          "locale": "en-US",
+          "label": "Payment scheme identifier",
+          "description": "Identifier of Payment scheme associate with account"
+        }
+      ],
+      "sd": "always",
+      "mandatory": false
+    },
+    {
+      "path": ["display_name"],
+      "display": [
+        {
+          "locale": "cs-CZ",
+          "label": "Uźivatelský název účtu",
+          "description": "Uźivatelský název účtu"
+        },
+        {
+          "locale": "en-US",
+          "label": "User description for account",
+          "description": "User description for account"
+        }
+      ],
+      "sd": "always",
+      "mandatory": false
     }
   ]
 }
